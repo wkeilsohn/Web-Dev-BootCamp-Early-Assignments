@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+</head>
+<body>
+<h1>Register</h1>
+
+<form>
+	<label for="First_Name">First Name:</label>
+	<!-- While not in action here, you can name the "name" and "id" arguments the same thing -->
+	<input name="f_name" id="First_Name" type="text" placeholder="Bill" required>
+	<label for="Last_Name">Last Name:</label>
+	<input name="l_name" id="Last_name" type="text" placeholder="Smith" required>
+	<p>
+		<label for="Male">Male</label>
+		<input name="Gender" id="Male" type="radio" value="1" required>
+		<label for="Female">Female</label>
+		<input name="Gender" id="Female" type="radio" value="2" required>
+		<label for="Other">Other</label>
+		<input type="radio" name="Gender" id="Other" value="3" required>
+		<!-- Order of labels and inputs matters as lines of code will be displayed in order. -->
+	</p>
+	<!-- Instead of paragraphs the solutions uses div. The affect is similar. -->
+	<p>
+		<label for="Email">Email:</label>
+		<input name="e_mail" id="Email" type="email" placeholder="Your Email Here" required="email">
+		<label for="Password">Password:</label>
+		<input name="password" id="Password" type="password" minlength="5" maxlength="10" required placeholder="Password Please">
+		<!-- Adding a required title = "Text" allows you to alter the incorrect password message -->
+	</p>
+	<p>
+		<label>
+		Birthday:
+		<select name=Month>
+			<option value="0" required>December</option>
+			<option value="1" required>January</option>
+			<option value="2" required>August</option>
+			<!-- As each line is a single option the number of lines/options can be quite extensive -->
+		</select>
+		<select name="Day">
+			<option value="0" required>1</option>
+			<option value="1" required>5</option>
+			<option value="2" required>8</option>
+		</select>
+		<select name="Year">
+			<option value="0" required>2000</option>
+			<option value="1" required>1994</option>
+			<option value="2" required>1884</option>
+		<!-- In this current state, the placeholders for the  pulldown menue(s) are considered acceptable answers.-->
+		</select>
+	</label>
+	</p>
+	<p>
+		<label for="Agreement">I agree to the terms and conditions:</label>
+		<input type="checkbox" name="Agreement" id="Agreement" required > 
+	</p>
+	<p>
+		<button>Submit</button>
+	</p>
+</form>
+
+</body>
+</html>
